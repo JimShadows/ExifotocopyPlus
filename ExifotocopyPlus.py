@@ -11,10 +11,11 @@ class ExifotocopyPlus():
         root.title("ExifotocopyPlus")
         style=ttk.Style(root)
         style.theme_use("clam")
-        style.configure("TButton",background="gray34",foreground="snow",font=("Helverica", 12), padding=6, relief="flat")
+        style.configure(".",font=("Helverica", 12),foreground="snow")
+        style.configure("TButton",background="gray20", padding=6, relief="flat")
         style.configure("TFrame",background="gray13")
-        style.configure("TLabel",background="gray13",foreground="snow",font=("Helverica", 12))
-        style.configure("TEntry",background="gray13",foreground="snow",fieldbackground="gray34",font=("Helverica", 12),relief="flat")
+        style.configure("TLabel",background="gray13")
+        style.configure("TEntry",background="gray13",fieldbackground="grey16",bordercolor="grey10",lightcolor="grey10",relief="flat")
 
         mainframe = ttk.Frame(root, padding="3 3 12 12")
         mainframe.grid(column=0, row=0, sticky=(N, W, E, S)) #distacia de los objetos en el frame iz ar de abajo
@@ -58,10 +59,10 @@ class ExifotocopyPlus():
         ttk.Button(mainframe, text="Execute", command=self.calculate).grid(column=2, row=10, sticky=E)
 
         ttk.Label(mainframe, text="Quellverzechnis").grid(column=1, row=1, sticky=(W,S))
-        ttk.Label(mainframe, text="Dateinamenserweiterung").grid(column=1, row=2, sticky=(W,S))
-        ttk.Label(mainframe, text="Tiefe der Verzeichnichsebene").grid(column=1, row=3, sticky=(W,S))
-        ttk.Label(mainframe, text="Zielverzeichnis").grid(column=1, row=4, sticky=(W,S))
-        ttk.Label(mainframe, text="Zielverzeichnis").grid(column=1, row=6, sticky=(W,S))
+        ttk.Label(mainframe, text="Zielverzeichnis").grid(column=1, row=2, sticky=(W,S))
+        ttk.Label(mainframe, text="Dateinamenserweiterung").grid(column=1, row=3, sticky=(W,S))
+        ttk.Label(mainframe, text="Dateinamenserweiterung").grid(column=1, row=4, sticky=(W,S))
+        ttk.Label(mainframe, text="Tiefe der Verzeichnichsebene").grid(column=1, row=6, sticky=(W,S))
 
 
         
