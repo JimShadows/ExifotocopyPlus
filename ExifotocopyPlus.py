@@ -4,6 +4,7 @@ from tkinter import *
 from tkinter import StringVar, ttk
 from tkinter import font
 from tkinter.constants import E, N, S, W
+from tkinter.ttk import Style
 
 class ExifotocopyPlus():
     def __init__(self, root):
@@ -12,15 +13,21 @@ class ExifotocopyPlus():
         style=ttk.Style(root)
         style.theme_use("clam")
         style.configure(".",font=("Helverica", 12),foreground="snow")
-        style.configure("TButton",background="gray20", padding=6, relief="flat")
+        style.configure("TButton",background="gray20",activebackground="grey10", padding=6, relief="flat")    
         style.configure("TFrame",background="gray13")
         style.configure("TLabel",background="gray13")
         style.configure("TEntry",background="gray13",fieldbackground="grey16",bordercolor="grey10",lightcolor="grey10",relief="flat")
+        style.configure("TCombobox",background="gray20",fieldbackground="grey16",bordercolor="grey10",lightcolor="grey10",relief="flat", arrowcolor="grey16")
+        style.configure("C.TFrame",background="dark orange")
 
         mainframe = ttk.Frame(root, padding="3 3 12 12")
         mainframe.grid(column=0, row=0, sticky=(N, W, E, S)) #distacia de los objetos en el frame iz ar de abajo
         root.columnconfigure(0, weight=1)
         root.rowconfigure(0, weight=1)
+        leftframe=ttk.Frame(mainframe,borderwidth=5, width=25, style="C.TFrame")
+        leftframe.grid(column=0,row=1,columnspan=1, padx=(10), pady=10)
+        leftframe.columnconfigure(1,weight=1)
+        leftframe.rowconfigure(1,weight=1)
 
          
         self.sourceDirectory =StringVar()
@@ -54,6 +61,12 @@ class ExifotocopyPlus():
 
         target_entry = ttk.Entry(mainframe, width=30, textvariable=self.targetDirectory)
         target_entry.grid(column=2, row=7, sticky=(W))
+
+
+        self.imageResizevar = StringVar()
+        imageResize = ttk.Combobox(mainframe, width=30, textvariable=self.imageResizevar)
+        imageResize['values'] = ('1280x720',"1280x800","1600x900","1600x1200", '1980x1080',"1980x1200")
+        imageResize.grid(column=2, row=7, sticky=(W))
 
 
         ttk.Button(mainframe, text="Execute", command=self.calculate).grid(column=2, row=10, sticky=E)
