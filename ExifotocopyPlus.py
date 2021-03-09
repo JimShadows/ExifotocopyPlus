@@ -17,9 +17,16 @@ class ExifotocopyPlus():
         style.configure("TFrame",background="gray13")
         style.configure("TLabel",background="gray13")
         style.configure("TEntry",background="gray13",fieldbackground="grey16",bordercolor="grey10",lightcolor="grey10",relief="flat")
-        style.configure("TCombobox",background="gray20",fieldbackground="grey16",bordercolor="grey10",lightcolor="grey10",relief="flat", arrowcolor="grey16")
-        style.configure("C.TFrame",background="dark orange")
 
+        style.configure("TCombobox",background="gray20",fieldbackground="grey16",selectbackground="dark orange",
+        bordercolor="grey10",lightcolor="grey10",relief="RAISED", arrowcolor="dark orange",arrowsize=20,focusfill="red")
+        root.option_add("*TCombobox*Listbox*Background", 'grey16')
+        root.option_add("*TCombobox*Listbox.font", 'Helverica')
+        root.option_add("*TCombobox*Listbox.foreground", 'snow')
+        root.option_add("*TCombobox*Listbox.selectBackground", 'dark orange')
+        root.option_add("TCombobox*Listbox.selectForeground", 'dark orange')
+                
+        style.configure("C.TFrame",background="dark orange")
         mainframe = ttk.Frame(root, padding="3 3 12 12")
         mainframe.grid(column=0, row=0, sticky=(N, W, E, S)) #distacia de los objetos en el frame iz ar de abajo
         root.columnconfigure(0, weight=1)
@@ -78,6 +85,9 @@ class ExifotocopyPlus():
         ttk.Label(mainframe, text="Tiefe der Verzeichnichsebene").grid(column=1, row=6, sticky=(W,S))
 
 
+        sourceDirectoryPhoto = PhotoImage(file="images/Folder.png")
+        ttk.Button(mainframe,image=sourceDirectoryPhoto, command=self.sourceDirectory).grid(column=3, row=1, sticky=E)
+
         
 
         for child in mainframe.winfo_children(): 
@@ -88,6 +98,9 @@ class ExifotocopyPlus():
         
     def calculate(self, *args):
             pass
+
+    def sourceDirectory(self,*args):
+        pass
 
 root = Tk()
 ExifotocopyPlus(root)
