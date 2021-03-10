@@ -5,6 +5,8 @@ from tkinter import StringVar, ttk
 from tkinter import font
 from tkinter.constants import E, N, S, W
 from tkinter.ttk import Style
+from tkinter import filedialog
+from PIL import Image
 
 class ExifotocopyPlus():
     def __init__(self, root):
@@ -13,21 +15,31 @@ class ExifotocopyPlus():
         style=ttk.Style(root)
         style.theme_use("clam")
         style.configure(".",font=("Helverica", 12),foreground="snow")
-        style.configure("TButton",background="gray20",activebackground="grey10", padding=6, relief="flat")    
+        #button style
+        style.configure("TButton",background="gray20",activebackground="grey10", padding=6, relief="flat",highlightbackground="dark orange")  
+        style.map('TButton', background=[('active','dark orange')])
+        #frame style
         style.configure("TFrame",background="gray13")
+        #label style
         style.configure("TLabel",background="gray13")
+        #entry style
         style.configure("TEntry",background="gray13",fieldbackground="grey16",bordercolor="grey10",lightcolor="grey10",relief="flat")
-
+        style.map('TEntry', background=[('selected','dark orange')])
+        #Combobox Style
         style.configure("TCombobox",background="gray20",fieldbackground="grey16",selectbackground="dark orange",
         bordercolor="grey10",lightcolor="grey10",relief="RAISED", arrowcolor="dark orange",arrowsize=20,focusfill="red")
+        style.map('TCombobox', arrowcolor=[('active','grey16')],background=[('active','dark orange')])
+        #Style of the List of the combobox
         root.option_add("*TCombobox*Listbox*Background", 'grey16')
         root.option_add("*TCombobox*Listbox.font", 'Helverica')
         root.option_add("*TCombobox*Listbox.foreground", 'snow')
         root.option_add("*TCombobox*Listbox.selectBackground", 'dark orange')
         root.option_add("TCombobox*Listbox.selectForeground", 'dark orange')
-                
+        #decorations styles      
         style.configure("C.TFrame",background="dark orange")
+        #mainframe
         mainframe = ttk.Frame(root, padding="3 3 12 12")
+        #layout-manager
         mainframe.grid(column=0, row=0, sticky=(N, W, E, S)) #distacia de los objetos en el frame iz ar de abajo
         root.columnconfigure(0, weight=1)
         root.rowconfigure(0, weight=1)
@@ -75,7 +87,9 @@ class ExifotocopyPlus():
         imageResize['values'] = ('1280x720',"1280x800","1600x900","1600x1200", '1980x1080',"1980x1200")
         imageResize.grid(column=2, row=7, sticky=(W))
 
-
+        #Button
+        sourceDirectoryPhoto = PhotoImage(file="images/Folder.png")
+        ttk.Button(mainframe,text="Open", command=self.sourceDirectory).grid(column=3, row=1, sticky=E)
         ttk.Button(mainframe, text="Execute", command=self.calculate).grid(column=2, row=10, sticky=E)
 
         ttk.Label(mainframe, text="Quellverzechnis").grid(column=1, row=1, sticky=(W,S))
@@ -83,10 +97,9 @@ class ExifotocopyPlus():
         ttk.Label(mainframe, text="Dateinamenserweiterung").grid(column=1, row=3, sticky=(W,S))
         ttk.Label(mainframe, text="Dateinamenserweiterung").grid(column=1, row=4, sticky=(W,S))
         ttk.Label(mainframe, text="Tiefe der Verzeichnichsebene").grid(column=1, row=6, sticky=(W,S))
+        ttk.Label(mainframe, text="Resolution").grid(column=1, row=7, sticky=(W,S))
 
 
-        sourceDirectoryPhoto = PhotoImage(file="images/Folder.png")
-        ttk.Button(mainframe,image=sourceDirectoryPhoto, command=self.sourceDirectory).grid(column=3, row=1, sticky=E)
 
         
 
@@ -95,12 +108,13 @@ class ExifotocopyPlus():
 
         source_entry.focus()
         root.bind("<Return>", self.calculate)
+        root.bind("<Return>", self.sourceDirectory)
         
     def calculate(self, *args):
-            pass
+        root.filename =  filedialog.askopenfilename(initialdir = "/home/",title = "Select file",filetypes = (("jpeg files","*.jpg"),("all files","*.*")))
 
-    def sourceDirectory(self,*args):
-        pass
+    def sourceDirectory(self, *args):
+        root.filename =  filedialog.askopenfilename(initialdir = "/",title = "Select file",filetypes = (("jpeg files","*.jpg"),("all files","*.*")))
 
 root = Tk()
 ExifotocopyPlus(root)
