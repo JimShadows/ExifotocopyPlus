@@ -11,26 +11,35 @@ class MyWidget(QtWidgets.QWidget):
 
     def initUI(self):
         # Title Bar in Pysiide6
-        self.setWindowIcon(QtGui.QIcon('images/logo.png'))
+        self.setWindowIcon(QtGui.QIcon('images/images/logo.png'))
         self.setWindowTitle("ExifotocopyPlus")
         self.setFont(QtGui.QFont("Helvetica", 12))
         self.setAutoFillBackground(True)
         # Style
         # self.setWindowOpacity(20)
-        self.setAttribute(QtCore.Qt.WA_NoSystemBackground, True)
-        self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
-        self.setAttribute(QtCore.Qt.WA_TintedBackground)
-        self.setAttribute(QtCore.Qt.WA_StyledBackground)
+        self.setAttribute(QtCore.Qt.WA_NoSystemBackground, False)
+        self.setAttribute(QtCore.Qt.WA_TranslucentBackground, True)
+        self.setAttribute(QtCore.Qt.WA_TintedBackground, True)
+        self.setAttribute(QtCore.Qt.WA_StyledBackground,True)
         GlobalBlur(int(self.winId()), hexColor=False, Acrylic=False, Dark=True, QWidget=self)
         self.setStyleSheet(
-            "QMainWindow{ background: rgba(255 ,136, 26, 150) }"
-            "QLineEdit { background-color: rgba(0,0, 0, 100) }"
-            "QComboBox{ background-color: rgba(0,0, 0, 100) }"
-            "QPushButton { background-color: rgba(0 ,0, 0, 0) }"
-            "QLabel { color: white }"
+            "QMainWindow { background-color: rgba(43 ,43, 43, 200) }"
+            "QToolTip {opacity:200}"
+            "QMenu {background-color:red}"
+            "QMenuBar{background-color: rgba(0 ,0, 0, 100)}"
+            "QLineEdit { background-color: rgba(26,26, 26, 100) }"
+            "QLineEdit { color: silver }"
+            "QLineEdit { border-width: 1px}"
+            "QLineEdit { border-style: ridge}"
+            "QLineEdit { border-color: rgba(0,0,0,50)}"
+            "QLineEdit { outline-color: rgb(55,200, 113) }"
+            "QComboBox{ background-color: rgba(26,26, 26, 100) }"
+            "QPushButton { background-color: rgba(0 ,0, 0, 100) }"
+            "QLabel { color: silver }"
             "QStatusBar{ background-color: rgba(255 ,136, 26, 150) }"
-            "color:white"
-            "background-color:rgba(10,10, 10, 10)")
+            "QWidget{background :rgba(0,0, 0, 200}")
+        palette = QtGui.QPalette()
+        #  palette.setColor(QtGui.QPalette.Background, QtGui.QColor("#99ccff"))
 
         button = QtWidgets.QPushButton(self)
         button.setWindowOpacity(0.1)
@@ -44,19 +53,23 @@ class MyWidget(QtWidgets.QWidget):
         destinationEntry = QtWidgets.QLineEdit(self)
         destinationLabel = QtWidgets.QLabel("Destination Folder")
         destinationButton = QtWidgets.QPushButton(self)
+        destinationButton.setWindowOpacity(0.1)
         destinationButton.setIcon(QtGui.QIcon('images/icons/folder-shared-fill.svg'))
         destinationButton.setIconSize(QtCore.QSize(24, 24))
         destinationButton.setStyleSheet("background-color:rgba(10,10, 10, 10)")
 
         fileExtensionEntry = QtWidgets.QLineEdit(self)
         fileExtensionLabel = QtWidgets.QLabel("Filename Extensions")
+        fileExtensionButton = QtWidgets.QPushButton(self)
+        fileExtensionButton.setWindowOpacity(0.1)
+        fileExtensionButton.setIcon(QtGui.QIcon('images/icons/file-settings-line.svg'))
+        fileExtensionButton.setIconSize(QtCore.QSize(24, 24))
+        fileExtensionButton.setStyleSheet("background-color:rgba(10,10, 10, 10)")
 
         datePolictBox = QtWidgets.QComboBox(self)
         datePolictLabel = QtWidgets.QLabel("No Exif Date Policity")
 
-        sourceEntry.setStyleSheet('color:white')
-
-        # Layout Settings
+        '''Layout Settings'''
         layout = QtWidgets.QGridLayout(self)
         layout.setSpacing(10)
         layout.addWidget(sourceLabel, 0, 0)
@@ -69,14 +82,17 @@ class MyWidget(QtWidgets.QWidget):
 
         layout.addWidget(fileExtensionLabel, 2, 0)
         layout.addWidget(fileExtensionEntry, 2, 1)
+        layout.addWidget(fileExtensionButton, 2, 2)
 
         layout.addWidget(datePolictLabel, 3, 0)
         layout.addWidget(datePolictBox, 3, 1)
 
         depthOfFolderStructureLabel = QtWidgets.QLabel("Depth of Folder Structure")
         depthOfFolderStructureBox = QtWidgets.QComboBox()
-        layout.addWidget(depthOfFolderStructureLabel,4,0)
-        layout.addWidget(depthOfFolderStructureBox,4,1)
+        layout.addWidget(depthOfFolderStructureLabel, 4, 0)
+        layout.addWidget(depthOfFolderStructureBox, 4, 1)
+
+        formatStringLevel1Folder = QtWidgets.QLabel
 
         button.clicked.connect(self.magic)
 
@@ -86,8 +102,7 @@ class MyWidget(QtWidgets.QWidget):
 
 
 if __name__ == "__main__":
-    app = QtWidgets.QApplication([])
+    app = QtWidgets.QApplication(sys.argv)
     widget = MyWidget()
     widget.show()
-
     sys.exit(app.exec())

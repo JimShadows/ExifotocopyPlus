@@ -90,7 +90,7 @@ class ExifotocopyPlus():
         imageResize.grid(column=2, row=7, sticky=(W))
 
         #Button
-        sourceDirectoryPhoto = PhotoImage(file=r"images/logo.png")
+        sourceDirectoryPhoto = PhotoImage(file=r"images/images/logo.png")
         ttk.Button(mainframe,text="Open", image =sourceDirectoryPhoto, command=self.openSourceDirectory).grid(column=3, row=1, sticky=E)
         ttk.Button(mainframe, text="Execute", command=self.execute).grid(column=2, row=10, sticky=E)
 
