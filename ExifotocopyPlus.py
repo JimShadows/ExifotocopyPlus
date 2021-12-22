@@ -15,7 +15,7 @@ class ExifotocopyPlus():
         root.config(background="red")
         style=ttk.Style(root)
         style.theme_use("clam")
-        style.configure(".",font=("Helverica", 12),foreground="snow",background="gray20")
+        style.configure(".",font=("Helvetica", 12),foreground="snow",background="gray20")
         style.map('.', background=[('active','dark orange')])
         #button style
         style.configure("TButton",background="gray20",activebackground="grey10", padding=6, relief="flat",highlightbackground="dark orange")  
