@@ -1,6 +1,5 @@
 import sys
 from PySide6 import QtCore, QtWidgets, QtGui
-from BlurWindow.blurWindow import GlobalBlur
 
 
 class MyWidget(QtWidgets.QWidget):
@@ -9,7 +8,6 @@ class MyWidget(QtWidgets.QWidget):
         self.source = ''
 
         self.init_ui()
-        self.magic()
 
     def init_ui(self):
         # Title Bar in Pysiide6
@@ -25,76 +23,75 @@ class MyWidget(QtWidgets.QWidget):
         self.setAttribute(QtCore.Qt.WA_StyledBackground, True)
         # GlobalBlur(int(self.winId()), hexColor=False, Acrylic=False, Dark=True, QWidget=self)
         self.setStyleSheet(
-            "QMainWindow { background-color: rgba(43 ,43, 43, 200) }"
+            "QMainWindow { background-color: rgb(43 ,43, 43) }"
             "QToolTip {opacity:200}"
             "QMenu {background-color:red}"
-            "QMenuBar{background-color: rgba(0 ,0, 0, 100)}"
-            "QLineEdit { background-color: rgba(26,26, 26, 100) }"
+            "QMenuBar{background-color: rgb(0 ,0, 0)}"
+            "QLineEdit { background-color: rgb(26,26, 26) }"
             "QLineEdit { color: silver }"
             "QLineEdit { border-width: 1px}"
             "QLineEdit { border-style: ridge}"
-            "QLineEdit { border-color: rgba(0,0,0,50)}"
+            "QLineEdit { border-color: rgb(0,0,0)}"
             "QLineEdit { outline-color: rgb(55,200, 113) }"
-            "QComboBox{ background-color: rgba(26,26, 26, 100) }"
+            "QComboBox{ background-color: rgb(26,26, 26) }"
             "QPushButton { background-color: rgba(0 ,0, 0, 0) }"
             "QLabel { color: silver }"
             "QStatusBar{ background-color: rgba(255 ,136, 26, 150) }")
 
-        button = QtWidgets.QPushButton(self)
-        button.setWindowOpacity(0.1)
-        button.setIcon(QtGui.QIcon('images/icons/folder-received-fill.svg'))
-        button.setIconSize(QtCore.QSize(24, 24))
-        button.setStyleSheet("background-color:rgba(10,10, 10, 10)")
+        source_button = QtWidgets.QPushButton(self)
+        source_button.setWindowOpacity(0.1)
+        source_button.setIconSize(QtCore.QSize(24, 24))
+        source_button.setStyleSheet("background-color:rgb(10,10, 10)")
+        source_button.setIcon(QtGui.QIcon('images/icons/folder-received-fill.svg'))
 
         source_entry = QtWidgets.QLineEdit(self.source, self)
         source_label = QtWidgets.QLabel("Source Folder")
 
         destination_entry = QtWidgets.QLineEdit(self)
-        destinationLabel = QtWidgets.QLabel("Destination Folder")
-        destinationButton = QtWidgets.QPushButton(self)
-        destinationButton.setWindowOpacity(0.1)
-        destinationButton.setIcon(QtGui.QIcon('images/icons/folder-shared-fill.svg'))
-        destinationButton.setIconSize(QtCore.QSize(24, 24))
-        destinationButton.setStyleSheet("background-color:rgba(10,10, 10, 10)")
+        destination_label = QtWidgets.QLabel("Destination Folder")
 
-        fileExtensionEntry = QtWidgets.QLineEdit(self)
-        fileExtensionLabel = QtWidgets.QLabel("Filename Extensions")
-        fileExtensionButton = QtWidgets.QPushButton(self)
-        fileExtensionButton.setWindowOpacity(0.1)
-        fileExtensionButton.setIcon(QtGui.QIcon('images/icons/file-settings-line.svg'))
-        fileExtensionButton.setIconSize(QtCore.QSize(24, 24))
-        fileExtensionButton.setStyleSheet("background-color:rgba(10,10, 10, 10)")
+        destination_button = QtWidgets.QPushButton(self)
+        destination_button.setWindowOpacity(0.1)
+        destination_button.setIcon(QtGui.QIcon('images/icons/folder-shared-fill.svg'))
+        destination_button.setIconSize(QtCore.QSize(24, 24))
+        destination_button.setStyleSheet("background-color:rgb(10,10, 10)")
 
-        datePolictBox = QtWidgets.QComboBox(self)
-        datePolictLabel = QtWidgets.QLabel("No Exif Date Policity")
+        file_extension_entry = QtWidgets.QLineEdit(self)
+        file_extension_label = QtWidgets.QLabel("Filename Extensions")
+        file_extension_button = QtWidgets.QPushButton(self)
+        file_extension_button.setWindowOpacity(0.1)
+        file_extension_button.setIcon(QtGui.QIcon('images/icons/file-settings-line.svg'))
+        file_extension_button.setIconSize(QtCore.QSize(24, 24))
+        file_extension_button.setStyleSheet("background-color:rgb(10,10, 10)")
+
+        date_policy_box = QtWidgets.QComboBox(self)
+        date_policy_label = QtWidgets.QLabel("No Exif Date Policity")
 
         '''Layout Settings'''
         layout = QtWidgets.QGridLayout(self)
         layout.setSpacing(10)
         layout.addWidget(source_label, 0, 0)
         layout.addWidget(source_entry, 0, 1)
-        layout.addWidget(button, 0, 2)
+        layout.addWidget(source_button, 0, 2)
 
-        layout.addWidget(destinationLabel, 1, 0)
+        layout.addWidget(destination_label, 1, 0)
         layout.addWidget(destination_entry, 1, 1)
-        layout.addWidget(destinationButton, 1, 2)
+        layout.addWidget(destination_button, 1, 2)
 
-        layout.addWidget(fileExtensionLabel, 2, 0)
-        layout.addWidget(fileExtensionEntry, 2, 1)
-        layout.addWidget(fileExtensionButton, 2, 2)
+        layout.addWidget(file_extension_label, 2, 0)
+        layout.addWidget(file_extension_entry, 2, 1)
+        layout.addWidget(file_extension_button, 2, 2)
 
-        layout.addWidget(datePolictLabel, 3, 0)
-        layout.addWidget(datePolictBox, 3, 1)
+        layout.addWidget(date_policy_label, 3, 0)
+        layout.addWidget(date_policy_box, 3, 1)
 
-        depthOfFolderStructureLabel = QtWidgets.QLabel("Depth of Folder Structure")
-        depthOfFolderStructureBox = QtWidgets.QComboBox()
-        layout.addWidget(depthOfFolderStructureLabel, 4, 0)
-        layout.addWidget(depthOfFolderStructureBox, 4, 1)
+        depth_of_folder_structure_label = QtWidgets.QLabel("Depth of Folder Structure")
+        depth_of_folder_structure_box = QtWidgets.QComboBox()
+        layout.addWidget(depth_of_folder_structure_label, 4, 0)
+        layout.addWidget(depth_of_folder_structure_box, 4, 1)
 
-        formatStringLevel1Folder = QtWidgets.QLabel
-
-        button.clicked.connect(self.magic)
-        destinationButton.clicked.connect(self.destination)
+        source_button.clicked.connect(self.magic)
+        destination_button.clicked.connect(self.destination)
 
     @QtCore.Slot()
     def magic(self):
