@@ -1,0 +1,124 @@
+Exifotocopy
+2008-2010 hannenz@freenet.de, scuba
+
+
+1. License
+------------------------------------------------------------------------------
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
+MA 02110-1301, USA.
+
+
+2. Dependencies
+------------------------------------------------------------------------------
+exifotocopy needs jhead.
+To use the GUI features zenity is needed.
+To use on-the-fly image manipulation ImageMagick (convert) is recommended
+To use the Configuration GUI you will need python and PyGTK installed (GTK >= 2.16)
+
+
+3. Installation
+------------------------------------------------------------------------------
+unpack the archive, cd to the exifotocopy directory and type
+
+$ ./install.sh
+
+to install everything as nautilus scripts.
+You can also copy the script files to whereever you want, the configuration
+file should be renamed to .exifotocopy and located in the user's home directory
+
+If you don't want to install the whole GUI bunch and just want the bash script, type:
+
+$ ./install.sh install
+
+Here is the whole install.sh usage:
+
+install [install|nautilus|uninstall] [destination]
+
+
+
+Distributed files are:
+
+exifotocopy.sh			main bash script
+exifotocopy.py			GUI frontend
+exifotocopy-install.sh	installation bash script
+defaultcfg				default configuration file
+plus some logo, localisation stuff...
+
+
+4. Usage
+------------------------------------------------------------------------------
+Exifotocopy is a tool to copy and/or (re)organize/ sort image files according to
+their Exif Date information.
+It is intended to be used as nautilus-script (GNOME file manager) but can
+be used as standalone command line tool as well.
+
+This script will create a folder structure depending on the Exif Date Information
+of the source image files. You can have structires like this:
+
++ Year
+|
++---+ Month
+	|
+	+---+Day
+
+or a flat structure with each Folder representing a single day.
+The script uses zenity for user interaction but this can be
+disabled for use in non-graphical environments or if simply not desired.
+In this case exifotocopy runs completely in the terminal.
+
+The script takes optionally one parameter which is the source directory to
+scan for image files. If omitted the current working directory is taken.
+
+
+4. Configuration
+------------------------------------------------------------------------------
+exifotocopy.sh reads all parameters from a configuration file located at
+~/.exifotocopy/exifotocopyrc
+which can be edited to suit your needs.
+
+If installed as nautilus-script, a GUI Frontend will appear if you choose
+ExiFotoCopy from the nautuilus-script menu, which allows to adjust all
+settings before the script will be run.
+
+The default configuration can be restored from the file defaultcfg
+distributed with this archive. Just copy/rename it to ~/.exifotocopy to restore
+the default settings.
+
+
+5. Changelog
+------------------------------------------------------------------------------
+2010-01-15:
+	- Version 0.5
+	- again I rewrote much, simplified many things...
+	- this will be the first official release!
+
+	
+2010-01-12: Version 0.4
+	- renamed to exifotocopy
+	- completed README
+	- reorganized many things, new "folder hierarchy feature" implemented
+	- polished Config GUI
+	- bugfixing
+	
+2010-01-11: Version 0.3
+	- rewrote photocopy-config in python with a nicer and more user friendly GUI
+	- some bugfixes
+
+2010-01-10: Version 0.2
+	-added support for image manipulation (ImageMagick convert & friends or arbitrary commands)
+
+2008-??-??: Version 0.1
+	- initial release
+	

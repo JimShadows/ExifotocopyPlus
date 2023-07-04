@@ -1,0 +1,303 @@
+# German translations for PACKAGE package
+# German messages for PACKAGE.
+# Copyright (C) 2010 THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# Johannes Braun <hannenz@freenet.de>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-01-15 10:16+0100\n"
+"PO-Revision-Date: 2010-01-15 10:17+0100\n"
+"Last-Translator: Johannes Braun <hannenz@freenet.de>\n"
+"Language-Team: German\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: exifotoconfig:117
+msgid "Configuration saved."
+msgstr "Konfigurationsdatei wurde gespeichert"
+
+#: exifotoconfig:179
+msgid "Select source folder"
+msgstr "Wählen Sie das Quellverzeichnis"
+
+#: exifotoconfig:181
+msgid "Source Folder"
+msgstr "Quellverzeichnis"
+
+#: exifotoconfig:183
+msgid "where to search for image files"
+msgstr "das Verzeichnis in dem nach Bilddateien gesucht werden soll"
+
+#: exifotoconfig:189
+msgid "Select destination folder"
+msgstr "Wählen Sie das Zielverzeichnis"
+
+#: exifotoconfig:191
+msgid "Destination Folder"
+msgstr "Zielverzeichnis"
+
+#: exifotoconfig:193
+msgid "default destination folder to use, if the above option is unset"
+msgstr "Vorgabe-Zielverzeichnis, wird benutzt, wenn die obige Option nicht gesetzt ist"
+
+#: exifotoconfig:199
+msgid "Filename Extensions"
+msgstr "Dateinamenserweiterungen"
+
+#: exifotoconfig:200
+msgid "a space seperated list of filename extensions (without the dot), the script should search for"
+msgstr "Eine durch Leerzeichen separierte Liste der Dateinamenserweiterungen, nach denen das Skript suchen soll"
+
+#: exifotoconfig:204
+msgid "Ask user"
+msgstr "Benutzer fragen"
+
+#: exifotoconfig:205
+msgid "Use the file's timestamp"
+msgstr "Benutze den Zeitstempel der Datei"
+
+#: exifotoconfig:208
+msgid "No Exif Date Policy"
+msgstr "Bei fehlendem Exif Datum"
+
+#: exifotoconfig:210
+msgid "What to do if a file has no Exif Date"
+msgstr "Geben Sie an, was das Skript tun soll, wenn es auf eine Datei stößt, die keine Exif Datumsinformation bereitstellt"
+
+#: exifotoconfig:220
+msgid "Depth of Folder Structure"
+msgstr "Tiefe der Verzeichnisstruktur"
+
+#: exifotoconfig:222
+msgid "Destination folder structur depth, determines how deeply nested the resulting destination folder structure will be, e.g. to sort your pictures by Year and Month, you could set this to '2', one folder for each year containing folders for each month of that year (where pictures are available)"
+msgstr "Tiefe der Zielverzeichnisstruktur; legt fest wie tief verschachtelt die resultierende Verzeichnisstruktur sein wird, um z. Bsp. Bilder nach Jahr und Monat abzulegen, würden sie eine Tiefe von '2' wählen, ein Verzeichnis für jedes Jahr mit jew. einem Verzeichnis pro Monat darin"
+
+#: exifotoconfig:226
+msgid "Format String Level 1 Folder"
+msgstr "Formatstring Verzeichnisebene 1"
+
+#: exifotoconfig:227
+msgid ""
+"Format string as passed to date command for the first directory level. Basic ones are:\n"
+"\n"
+"%d: day of month as number(1-31)\n"
+"%m: month as number (1-12)\n"
+"%B: month as localized string (e.g. 'March')\n"
+"%Y: Year \n"
+"%V: Calendar week (1-53)\n"
+"%H: Hour (0-23)\n"
+"%M: minute (0-59)\n"
+"i: Second (0-59)\n"
+"\n"
+"Please refer to manpage of date command for more detailed info (type 'man date' in a terminal)"
+msgstr ""
+"Formatstring wie er an das Kommando date übergeben wird für die Verzeichnisebene 1. Die wichtigsten Formate sind:\n"
+"\n"
+"%d: Tag des Monats als Zahl (1-31)\n"
+"%m: Monat als Zahl (1-12)\n"
+"%B: Monat als lokalisierter String (z. Bsp. 'April')\n"
+"%Y: Jahr%V: Kalenderwoche (1-53)\n"
+"%H: Stunde (0-23)\n"
+"%M: Minute (0-59)\n"
+"%i: Sekunde (0-59)\n"
+"\n"
+"Lesen Sie die Hilfeseite zu date um mehr zu erfahren (Geben Sie 'man date' in einem Terminal ein)"
+
+#: exifotoconfig:231
+msgid "Format String Level 2 Folder"
+msgstr "Formatstring Verzeichnisebene 2"
+
+#: exifotoconfig:232
+msgid ""
+"Format string as passed to date command for the second directory level. Basic ones are:\n"
+"\n"
+"%d: day of month as number(1-31)\n"
+"%m: month as number (1-12)\n"
+"%B: month as localized string (e.g. 'March')\n"
+"%Y: Year \n"
+"%V: Calendar week (1-53)\n"
+"%H: Hour (0-23)\n"
+"%M: minute (0-59)\n"
+"i: Second (0-59)\n"
+"\n"
+"Please refer to manpage of date command for more detailed info (type 'man date' in a terminal)"
+msgstr ""
+"Formatstring wie er an das Kommando date übergeben wird für die Verzeichnisebene 2. Die wichtigsten Formate sind:\n"
+"\n"
+"%d: Tag des Monats als Zahl (1-31)\n"
+"%m: Monat als Zahl (1-12)\n"
+"%B: Monat als lokalisierter String (z. Bsp. 'April')\n"
+"%Y: Jahr%V: Kalenderwoche (1-53)\n"
+"%H: Stunde (0-23)\n"
+"%M: Minute (0-59)\n"
+"%i: Sekunde (0-59)\n"
+"\n"
+"Lesen Sie die Hilfeseite zu date um mehr zu erfahren (Geben Sie 'man date' in einem Terminal ein)"
+
+#: exifotoconfig:236
+msgid "Format String Level 3 Folder"
+msgstr "Formatstring Verzeichnisebene 3"
+
+#: exifotoconfig:237
+msgid ""
+"Format string as passed to date command for the third directory level. Basic ones are:\n"
+"\n"
+"%d: day of month as number(1-31)\n"
+"%m: month as number (1-12)\n"
+"%B: month as localized string (e.g. 'March')\n"
+"%Y: Year \n"
+"%V: Calendar week (1-53)\n"
+"%H: Hour (0-23)\n"
+"%M: minute (0-59)\n"
+"i: Second (0-59)\n"
+"\n"
+"Please refer to manpage of date command for more detailed info (type 'man date' in a terminal)"
+msgstr ""
+"Formatstring wie er an das Kommando date übergeben wird für die Verzeichnisebene 3. Die wichtigsten Formate sind:\n"
+"\n"
+"%d: Tag des Monats als Zahl (1-31)\n"
+"%m: Monat als Zahl (1-12)\n"
+"%B: Monat als lokalisierter String (z. Bsp. 'April')\n"
+"%Y: Jahr%V: Kalenderwoche (1-53)\n"
+"%H: Stunde (0-23)\n"
+"%M: Minute (0-59)\n"
+"%i: Sekunde (0-59)\n"
+"\n"
+"Lesen Sie die Hilfeseite zu date um mehr zu erfahren (Geben Sie 'man date' in einem Terminal ein)"
+
+#: exifotoconfig:241
+msgid "Format String Filename"
+msgstr "Formatstring Dateiname"
+
+#: exifotoconfig:242
+msgid ""
+"Format string as passed to date command for the destination filename. Basic ones are:\n"
+"\n"
+"%d: day of month as number(1-31)\n"
+"%m: month as number (1-12)\n"
+"%B: month as localized string (e.g. 'March')\n"
+"%Y: Year\n"
+"%V: Calendar week (1-53)\n"
+"%H: Hour (0-23)\n"
+"%M: minute (0-59)\n"
+"i: Second (0-59)\n"
+"\n"
+"Please refer to manpage of date command for more detailed info (type 'man date' in a terminal)"
+msgstr ""
+"Formatstring wie er an das Kommando date übergeben wird für den Zieldateinamen. Die wichtigsten Formate sind:\n"
+"\n"
+"%d: Tag des Monats als Zahl (1-31)\n"
+"%m: Monat als Zahl (1-12)\n"
+"%B: Monat als lokalisierter String (z. Bsp. 'April')\n"
+"%Y: Jahr%V: Kalenderwoche (1-53)\n"
+"%H: Stunde (0-23)\n"
+"%M: Minute (0-59)\n"
+"%i: Sekunde (0-59)\n"
+"\n"
+"Lesen Sie die Hilfeseite zu date um mehr zu erfahren (Geben Sie 'man date' in einem Terminal ein)"
+
+#: exifotoconfig:246
+msgid "Number Format String"
+msgstr "Formatstring Nummerierung"
+
+#: exifotoconfig:247
+msgid "Format string as passed to printf command for the destination filename count. Leave blank to disable numbering, use printf-style format string, see manpage of printf for more detailed info (type 'man printf' in a terminal)"
+msgstr "Formatstring wie er an das printf-Kommando übergeben wird für die Dateinamen-Nummerierung. Leer lassen, um die Nummerierung zu deaktivieren oder Formatstring gemäß printf Syntax benutzen. Lesen Sie die Hilfeseite zu printf um mehr zu erfahren (Geben Sie 'man printf' in ein Terminal ein)"
+
+#: exifotoconfig:251
+msgid "copied"
+msgstr "kopiert"
+
+#: exifotoconfig:252
+msgid "moved"
+msgstr "verschoben"
+
+#: exifotoconfig:253
+msgid "copied and resized"
+msgstr "kopiert und in der Größe geändert"
+
+#: exifotoconfig:262
+msgid "Files will be"
+msgstr "Dateien werden"
+
+#: exifotoconfig:264
+msgid "specify, what to do with each file"
+msgstr "Legen Sie fest, was mit jeder Datei geschehen soll"
+
+#: exifotoconfig:268
+msgid "convert options"
+msgstr "Optionen für 'convert'"
+
+#: exifotoconfig:269
+msgid "Any options 'convert' understands, e.g. to resize try something like '-resize 1280x800' or consult 'man convert'"
+msgstr "Geben Sie Optionen ein, die 'convert' versteht, z. Bsp. um die Bilder zu skalieren: -resize 1280x800 oder schauen Sie in die Hilfeseite zu 'convert', indem Sie 'man convert' in ein Terminal eingeben"
+
+#: exifotoconfig:273
+msgid "Window"
+msgstr "Fenster"
+
+#: exifotoconfig:274
+msgid "Notification"
+msgstr "Benachrichtigung"
+
+#: exifotoconfig:275
+msgid "No GUI"
+msgstr "Keine GUI"
+
+#: exifotoconfig:283
+msgid "GUI Mode"
+msgstr "GUI Modus"
+
+#: exifotoconfig:285
+msgid "In window mode you will get a window with a progress bar, in notification mode an icon in the systray will keep you informed about the script's status"
+msgstr "Im Fenstermodus wird ein Fenster mit Fortschrittsbalken angezeigt, im Benachrichtigungsmodus hält Sie ein Symbol im Systray über den Skriptstatus auf dem Laufenden "
+
+#: exifotoconfig:289
+msgid "Logfile"
+msgstr "Logdatei"
+
+#: exifotoconfig:290
+msgid "Location of logfile. Set to /dev/null to disable logging"
+msgstr "Geben Sie den Ort der Logdatei an oder schreiben sie '/dev/null', um die Logaufzeichnung zu deaktivieren"
+
+#~ msgid "confirm"
+#~ msgstr "Bestätigen Sie"
+#~ msgid "Changes to configuration are not saved!"
+#~ msgstr "Änderungen an der Konfiguration wurden noch nicht gespeichert"
+#~ msgid "Activate Zenity GUI"
+#~ msgstr "Aktiviere Zenity GUI"
+#~ msgid "whether exifotocopy should use GUI elements"
+#~ msgstr ""
+#~ "legt fest, ob exifotocopy GUI Elemente zur Interaktion benutzen soll"
+#~ msgid "Prompt for Destination Folder"
+#~ msgstr "Abfrage nach Zielverzeichnis"
+#~ msgid ""
+#~ "If this option is checked, the script will ask for the destination folder "
+#~ "before every run"
+#~ msgstr ""
+#~ "Wenn diese Option gesetzt ist, wird das Skript vor jedem Lauf nach dem "
+#~ "Zielverzeichnis fragen"
+#~ msgid "Filename Extension"
+#~ msgstr "Dateinamenserweiterung"
+#~ msgid ""
+#~ "Destination filename extension. Leave blank to keep the original file's "
+#~ "extension"
+#~ msgstr ""
+#~ "Legen Sie die Endung fest, die die Zieldatei bekommen soll, oder lassen "
+#~ "Sie dieses Feld leer, um die Erweiterung der Originaldatei beizubehalten"
+#~ msgid "Resize Options"
+#~ msgstr "Optionen für Größenänderung"
+#~ msgid "Enter something like '1280x800' or just '1280'"
+#~ msgstr "Geben Sie etwas in der Art.' 1280x800' oder nur '1280' ein"
+#~ msgid "Prompt for Resize Options"
+#~ msgstr "Abfrage nach Größenänderungsoptionen"
+#~ msgid "if checked, the script asks for resize options before every run"
+#~ msgstr ""
+#~ "Wenn diese Option gesetzt ist, wird das Skript vor jedem Lauf dnach den "
+#~ "Optionen für die Größenänderung fragen"
+

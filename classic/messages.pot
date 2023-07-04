@@ -1,0 +1,242 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-01-15 10:18+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: exifotoconfig:117
+msgid "Configuration saved."
+msgstr ""
+
+#: exifotoconfig:179
+msgid "Select source folder"
+msgstr ""
+
+#: exifotoconfig:181
+msgid "Source Folder"
+msgstr ""
+
+#: exifotoconfig:183
+msgid "where to search for image files"
+msgstr ""
+
+#: exifotoconfig:189
+msgid "Select destination folder"
+msgstr ""
+
+#: exifotoconfig:191
+msgid "Destination Folder"
+msgstr ""
+
+#: exifotoconfig:193
+msgid "default destination folder to use, if the above option is unset"
+msgstr ""
+
+#: exifotoconfig:199
+msgid "Filename Extensions"
+msgstr ""
+
+#: exifotoconfig:200
+msgid ""
+"a space seperated list of filename extensions (without the dot), the script "
+"should search for"
+msgstr ""
+
+#: exifotoconfig:204
+msgid "Ask user"
+msgstr ""
+
+#: exifotoconfig:205
+msgid "Use the file's timestamp"
+msgstr ""
+
+#: exifotoconfig:208
+msgid "No Exif Date Policy"
+msgstr ""
+
+#: exifotoconfig:210
+msgid "What to do if a file has no Exif Date"
+msgstr ""
+
+#: exifotoconfig:220
+msgid "Depth of Folder Structure"
+msgstr ""
+
+#: exifotoconfig:222
+msgid ""
+"Destination folder structur depth, determines how deeply nested the "
+"resulting destination folder structure will be, e.g. to sort your pictures "
+"by Year and Month, you could set this to '2', one folder for each year "
+"containing folders for each month of that year (where pictures are available)"
+msgstr ""
+
+#: exifotoconfig:226
+msgid "Format String Level 1 Folder"
+msgstr ""
+
+#: exifotoconfig:227
+msgid ""
+"Format string as passed to date command for the first directory level. Basic "
+"ones are:\n"
+"\n"
+"%d: day of month as number(1-31)\n"
+"%m: month as number (1-12)\n"
+"%B: month as localized string (e.g. 'March')\n"
+"%Y: Year \n"
+"%V: Calendar week (1-53)\n"
+"%H: Hour (0-23)\n"
+"%M: minute (0-59)\n"
+"i: Second (0-59)\n"
+"\n"
+"Please refer to manpage of date command for more detailed info (type 'man "
+"date' in a terminal)"
+msgstr ""
+
+#: exifotoconfig:231
+msgid "Format String Level 2 Folder"
+msgstr ""
+
+#: exifotoconfig:232
+msgid ""
+"Format string as passed to date command for the second directory level. "
+"Basic ones are:\n"
+"\n"
+"%d: day of month as number(1-31)\n"
+"%m: month as number (1-12)\n"
+"%B: month as localized string (e.g. 'March')\n"
+"%Y: Year \n"
+"%V: Calendar week (1-53)\n"
+"%H: Hour (0-23)\n"
+"%M: minute (0-59)\n"
+"i: Second (0-59)\n"
+"\n"
+"Please refer to manpage of date command for more detailed info (type 'man "
+"date' in a terminal)"
+msgstr ""
+
+#: exifotoconfig:236
+msgid "Format String Level 3 Folder"
+msgstr ""
+
+#: exifotoconfig:237
+msgid ""
+"Format string as passed to date command for the third directory level. Basic "
+"ones are:\n"
+"\n"
+"%d: day of month as number(1-31)\n"
+"%m: month as number (1-12)\n"
+"%B: month as localized string (e.g. 'March')\n"
+"%Y: Year \n"
+"%V: Calendar week (1-53)\n"
+"%H: Hour (0-23)\n"
+"%M: minute (0-59)\n"
+"i: Second (0-59)\n"
+"\n"
+"Please refer to manpage of date command for more detailed info (type 'man "
+"date' in a terminal)"
+msgstr ""
+
+#: exifotoconfig:241
+msgid "Format String Filename"
+msgstr ""
+
+#: exifotoconfig:242
+msgid ""
+"Format string as passed to date command for the destination filename. Basic "
+"ones are:\n"
+"\n"
+"%d: day of month as number(1-31)\n"
+"%m: month as number (1-12)\n"
+"%B: month as localized string (e.g. 'March')\n"
+"%Y: Year\n"
+"%V: Calendar week (1-53)\n"
+"%H: Hour (0-23)\n"
+"%M: minute (0-59)\n"
+"i: Second (0-59)\n"
+"\n"
+"Please refer to manpage of date command for more detailed info (type 'man "
+"date' in a terminal)"
+msgstr ""
+
+#: exifotoconfig:246
+msgid "Number Format String"
+msgstr ""
+
+#: exifotoconfig:247
+msgid ""
+"Format string as passed to printf command for the destination filename "
+"count. Leave blank to disable numbering, use printf-style format string, see "
+"manpage of printf for more detailed info (type 'man printf' in a terminal)"
+msgstr ""
+
+#: exifotoconfig:251
+msgid "copied"
+msgstr ""
+
+#: exifotoconfig:252
+msgid "moved"
+msgstr ""
+
+#: exifotoconfig:253
+msgid "copied and resized"
+msgstr ""
+
+#: exifotoconfig:262
+msgid "Files will be"
+msgstr ""
+
+#: exifotoconfig:264
+msgid "specify, what to do with each file"
+msgstr ""
+
+#: exifotoconfig:268
+msgid "convert options"
+msgstr ""
+
+#: exifotoconfig:269
+msgid ""
+"Any options 'convert' understands, e.g. to resize try something like '-"
+"resize 1280x800' or consult 'man convert'"
+msgstr ""
+
+#: exifotoconfig:273
+msgid "Window"
+msgstr ""
+
+#: exifotoconfig:274
+msgid "Notification"
+msgstr ""
+
+#: exifotoconfig:275
+msgid "No GUI"
+msgstr ""
+
+#: exifotoconfig:283
+msgid "GUI Mode"
+msgstr ""
+
+#: exifotoconfig:285
+msgid ""
+"In window mode you will get a window with a progress bar, in notification "
+"mode an icon in the systray will keep you informed about the script's status"
+msgstr ""
+
+#: exifotoconfig:289
+msgid "Logfile"
+msgstr ""
+
+#: exifotoconfig:290
+msgid "Location of logfile. Set to /dev/null to disable logging"
+msgstr ""

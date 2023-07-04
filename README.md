@@ -1,2 +1,2 @@
 # ExifotocopyPlus
-a fork off exifotocopy
+a fork of exifotocopy
